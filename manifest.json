@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Steal meme context menu",
+    "description": "Adds a \"Steal meme\" option to the context menu when clicking images",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["save-image.js"]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ]
+}
